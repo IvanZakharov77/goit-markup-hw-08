@@ -1,0 +1,299 @@
+/*modal*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: $first-color;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+      0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+
+      &-button {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color:$first-color;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        top: 8px;
+        right: 8px;
+        cursor: pointer;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+      }
+
+      &-button:hover {
+        fill:$accent-color
+      }
+
+      &-vektor {
+        width: 11px;
+        height: 11px;
+      }
+}
+
+
+.send{
+ & h2 {
+    margin-top: 40px;
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+
+  }
+
+  &-title {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: #757575;
+  }
+ &-title {
+    display: block;
+  }
+}
+
+.form{
+  padding-right: 40px;
+  padding-left: 40px;
+
+
+  &>label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .formstrok {
+    padding-left: 42px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+  }
+
+
+}
+
+
+.form{
+  textarea {
+    padding-top: 12px;
+    padding-left: 16px;
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    margin-bottom: 10px;
+  }
+
+  textarea::placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+
+
+  }
+}
+
+
+.sendName {
+  position: relative;
+}
+
+
+.iconperson {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 12px;
+
+}
+
+.sendPhone {
+  position: relative;
+}
+
+.iconphone {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 12px;
+
+}
+
+.sendEmail {
+  position: relative;
+}
+
+.iconemail {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 12px;
+
+}
+
+.namelink{
+  &~svg{
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+ }
+
+&{
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1)
+  }
+
+  &:focus~svg{
+    fill:$accent-color;
+  }
+}
+
+.namelink{
+  &:hover{
+    outline: 0;
+     border: 1px solid $accent-color;
+   }
+
+   &:focus{
+    outline: 0;
+     border: 1px solid $accent-color;
+   }
+}
+
+.modalText{
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover{
+    outline: 0;
+     border: 1px solid $accent-color;
+   }
+
+&:focus{
+  outline: 0;
+   border: 1px solid $accent-color;
+ }
+}
+
+
+
+
+
+.form .check {
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.check {
+  input {
+
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .send-check {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+
+  }
+
+  span a {
+    color: $accent-color;
+    text-decoration: underline;
+  }
+}
+
+.iconcheck2 {
+  display: inline-block;
+  border: 2px solid $primary-text-color;
+  border-radius: 3px;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+}
+
+.checkbox:checked~.iconcheck2 {
+  background-color: $accent-color;
+  background-image: url(../image/iconcheck.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border: $accent-color;
+
+}
+
+
+
+
+
+.buttonSend {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  padding: 10px 55px 10px 54px;
+  background: $accent-color;
+  font-size: 16px;
+  line-height: 1.9;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: $first-color;
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+
+ &:hover,
+&:focus {
+  background: #188CE8;
+}
+
+}
+
+
