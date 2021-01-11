@@ -695,7 +695,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 210px;
+  width: calc((100% - 2 * 15px) / 2);
   height: 90px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
