@@ -1,15 +1,24 @@
 /*team*/
+.ourteam {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #F5F4FA;
+h2{
+  text-align: center;
+}
+}
 .social {
   display: flex;
   justify-content: space-around;
+
   width: 206px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 30px;
+margin-left: auto;
+margin-right: auto;
+  margin-bottom: 24px;
 
  &-item {
     display: flex;
-    justify-content: space-around;
+     justify-content: space-around;
     align-items: center;
     border-radius: 50%;
     width: 44px;
@@ -37,16 +46,12 @@
 
 
 
-.ourteam {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  background: #F5F4FA;
-}
+
 
 .command-link {
   display: flex;
   justify-content: space-between;
-
+  flex-direction: column;
   & img {
     margin-bottom: 30px;
   }
@@ -57,11 +62,10 @@
     letter-spacing: 0.03em;
     font-weight: 500;
     color: $primary-text-color;
-    text-align: center;
+     text-align: center;
     margin-bottom: 10px;
   }
 }
-
 
 
 .command-link {
@@ -69,6 +73,7 @@
     background: #fff;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
   }
 
   & p {

@@ -4,8 +4,7 @@
 }
 /*filters*/
 .filters {
-  display: flex;
-  justify-content: center;
+
   margin-bottom: 50px;
   .button-link {
     border: none;
@@ -51,8 +50,7 @@
   padding-top: 94px;
   padding-bottom: 94px;
   .projects {
-    display: flex;
-    flex-wrap: wrap;
+
     margin: -15px;
     /*ужимаем маржины флексм-элементов*/
   }

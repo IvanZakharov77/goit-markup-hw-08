@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
-   
+
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
@@ -16,16 +16,27 @@
  <!--header-->
     <header class="header">
         <div class="container header-container">
+
+
             <nav class="main-nav">
                 <a class="logo" href="index.html"><span class="color-logo">Web</span><span
-                        class="color-logo-second">Studio</span></a>
-                <ul class="nav-list list">
+                   >Studio</span></a>
+                    <button type="button" class="menu-button is-open" data-menu-button>
+                        <svg   width="40" height="40" aria-label="Переключатель мобильного меню">
+
+                            <use class="icon-closes" href="./image/sprite.svg#closes"></use>
+                            <use class="icon-menu" href="./image/sprite.svg#menu"></use>
+                        </svg>
+
+                    </button>
+
+                <!-- <ul class="nav-list list">
                     <li class="item"><a class="link current" href="index.html">Студия</a></li>
                     <li class="item"><a class="link" href="portfolio.html">Портфолио</a></li>
                     <li class="item"><a class="link" href="#">Контакты</a></li>
-                </ul>
+                </ul> -->
             </nav>
-            <ul class="nav-contacts list">
+            <!-- <ul class="nav-contacts list">
                 <li class="item">
                     <a class="link " href="mailto:info@devstudio.com">
                         <svg class="link-mail">
@@ -39,7 +50,9 @@
                             <use href="./image/sprite.svg#phone"></use>
                         </svg> +38 096 111 11 11</a>
                 </li>
-            </ul>
+            </ul> -->
+
+
         </div>
     </header>
     <!--main-->
@@ -122,6 +135,7 @@
                 <ul class="command-link">
                     <li>
                         <img src="./image/team1.jpg" alt="дизайнер Игорь Демьяненко" width="270" height="260">
+
                         <h3>Игорь Демьяненко</h3>
                         <p>Product Designer</p>
                         <div class="social">
@@ -146,6 +160,7 @@
                                 </svg>
                             </div>
                         </div>
+
                     </li>
                     <li>
                         <img src="./image/team2.jpg" alt="разработчик Ольга Репина" width="270" height="260">
@@ -273,7 +288,8 @@
     <footer class="footer">
         <div class="container footer-container">
             <address>
-                <a class="logo-footer" href="index.html"><span class="color-logo">Web</span>Studio</a>
+                <a class="logo-footer logo " href="index.html"><span class="color-logo">Web</span><span
+                    class="color-logo-second">Studio</span></a>
                 <p>г. Киев, пр-т Леси Украинки, 26</p>
                 <ul class="footer-link">
                     <li><a href="mailto:info@example.com"> info@example.com</a></li>
@@ -377,6 +393,7 @@
         </div>
 
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 

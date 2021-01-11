@@ -1,21 +1,24 @@
 
 
-
 /*client*/
 .first-client {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  h2{
+    text-align: center;
+  }
 }
 
 .client {
   display: flex;
   justify-content: space-between;
-
+flex-wrap: wrap;
   &-item {
+    margin-top:30px ;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 170px;
+    width: 210px;
     height: 90px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
@@ -30,5 +33,3 @@
   }
 
 }
-
-

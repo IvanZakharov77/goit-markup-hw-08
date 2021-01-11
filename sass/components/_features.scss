@@ -1,27 +1,41 @@
 
 /*features*/
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px
-
+  // @media screen and (min-width:768px) {
+  //   padding-top: 94px;
+  //   padding-bottom: 94px
+  // }
+  @media screen and (max-width:767px) {
+    padding-top: 60px;
+    padding-bottom:30px
+  }
 }
 
 .features-link {
- 
-  display: flex;
-  justify-content: space-around;
-  .features-gray {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #F5F4FA;
-    width: 270px;
-    height: 120px;
-    border-radius: 4px;
-    margin-bottom: 30px;
-  }
+
+
+  .features-gray{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #F5F4FA;
+      width: 100%;
+      height: 120px;
+      border-radius: 4px;
+      margin-bottom: 30px;
+
+  //   @media screen and (min-width){
+  //   align-items: center;
+  //   background: #F5F4FA;
+  //   width: 270px;
+  //   height: 120px;
+  //   border-radius: 4px;
+  //   margin-bottom: 30px;
+  // }
+}
+
 h3{
-  text-align: left;
+  text-align:center;
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.03em;
@@ -31,21 +45,21 @@ h3{
   padding-bottom: 10px
 }
 p{
-  text-align: left;
+
+  font-weight: 400;
+  padding-bottom: 30px;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: $second-text-color
 }
-li{
-  width: 270px;
+// li{
+//   width: 270px;
+// }
+// li:not(:last-child) {
+//   margin-right: 30px;
+// }
 }
-li:not(:last-child) {
-  margin-right: 30px;
-}
-}
-
-
 
 .vektor {
   width: 70px;

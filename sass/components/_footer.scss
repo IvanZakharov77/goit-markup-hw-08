@@ -6,15 +6,24 @@
   padding-bottom: 60px;
 
 
-&-container {
-  display: flex;
-  align-items: baseline;
-}
 
 }
+.footer-title {
 
+  text-align: center;
+   color:$first-color;
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 1.17;
+   margin-bottom: 20px;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+
+ }
 .footer-two {
-  margin-left: 70px;
+  margin-top: 60px;
+
+
   .footer-social {
     display: flex;
     justify-content: flex-start;
@@ -53,15 +62,7 @@
 
 
 .footer{
-  .logo-footer {
-    display: block;
-    font-family: Raleway, sans-serif;
-    font-size: 26px;
-    line-height: 1.2;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 20px;
-  }
+
   & address {
     font-size: 14px;
     line-height: 1.7;
@@ -89,8 +90,11 @@
   }
 }
 
-address p {
+address{
+  text-align: center;
+  p {
+margin-top: 20px;
   margin-bottom: 9px;
 }
-
+}
 
