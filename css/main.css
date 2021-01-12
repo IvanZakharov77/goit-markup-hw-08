@@ -124,6 +124,7 @@ body {
 
 /*header*/
 .header {
+  position: relative;
   border-bottom: 1px solid #ECECEC;
 }
 
@@ -150,16 +151,96 @@ body {
   background-color: transparent;
 }
 
-.menu-button .icon-closes {
+.menu-button .icon-cross {
   display: none;
 }
 
-.menu-button.is-open .icon-closes {
+.menu-button.is-open .icon-cross {
   display: block;
 }
 
 .menu-button.is-open .icon-menu {
   display: none;
+}
+
+.menu-container {
+  background-color: #ffffff;
+  position: absolute;
+}
+
+.menu-container.is-open {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    top: 101%;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .contacts {
+    padding-bottom: 60px;
+  }
+  .nav-list li:not(:first-child) {
+    margin-top: 40px;
+  }
+  .nav-contacts li:not(:first-child) {
+    margin-top: 16px;
+  }
+  .navigation > .nav-list, .contacts > .nav-contacts {
+    text-align: center;
+  }
+}
+
+.nav-list .link {
+  color: #212121;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-list .link:hover, .nav-list .link:focus, .nav-list .link.current {
+  color: #2196F3;
+}
+
+.nav-list .link.current::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  bottom: -8px;
+  left: 50%;
+  right: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  border-radius: 2px;
+  background-color: #188CE8;
+}
+
+.nav-contacts .link {
+  color: #757575;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+  fill: currentColor;
+}
+
+.nav-contacts .link:focus, .nav-contacts .link:hover {
+  color: #2196F3;
+}
+
+.nav-contacts svg {
+  margin-right: 10px;
 }
 
 /*hero*/
