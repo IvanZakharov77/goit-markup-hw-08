@@ -29,24 +29,34 @@ display: inline-flex;
     &.is-open .icon-menu {
         display: none;
     }
+    @media screen and (min-width:768px){
+        display: none;
+    }
+
 }
 .menu-container{
 
 background-color: $first-color;
+
+@media screen and (max-width:767px){
     position: absolute;
-
-
-&.is-open{
-display: block;
-}
-@media screen and (max-width: 767px){
     display: none;
     top: 101%;
     left: 0;
 width: 100%;
+&.is-open{
+    display: block;
+    }
+}
+
+
+
+@media screen and (min-width:768px){
+    display: flex;
 }
 }
 @media screen and (max-width: 767px){
+
     .navigation{
         padding-top: 60px;
         padding-bottom: 60px;
@@ -66,6 +76,9 @@ width: 100%;
 }
 }
 .nav-list{
+    @media screen and (min-width:768px){
+        display: flex;
+    }
     .link{
         color: $primary-text-color;
         font-size: 18px;

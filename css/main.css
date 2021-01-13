@@ -87,6 +87,10 @@ body {
 }
 
 /*class container*/
+body.modal-open {
+  overflow: hidden;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -163,21 +167,34 @@ body {
   display: none;
 }
 
-.menu-container {
-  background-color: #ffffff;
-  position: absolute;
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
 }
 
-.menu-container.is-open {
-  display: block;
+.menu-container {
+  background-color: #ffffff;
 }
 
 @media screen and (max-width: 767px) {
   .menu-container {
+    position: absolute;
     display: none;
     top: 101%;
     left: 0;
     width: 100%;
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -197,6 +214,14 @@ body {
   }
   .navigation > .nav-list, .contacts > .nav-contacts {
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -307,6 +332,9 @@ body {
 
 /*modal*/
 .backdrop {
+  padding-top: 94px;
+  padding-left: 15px;
+  padding-right: 15px;
   position: fixed;
   top: 0;
   left: 0;
@@ -315,8 +343,7 @@ body {
   background: rgba(0, 0, 0, 0.2);
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -325,13 +352,9 @@ body {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  position: relative;
+  width: 100%;
+  height: 609px;
   background-color: #ffffff;
   border-radius: 4px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -361,9 +384,14 @@ body {
   height: 11px;
 }
 
+.send {
+  padding-top: 40px;
+}
+
 .send h2 {
-  margin-top: 40px;
-  margin-bottom: 12px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 12px;
   text-align: center;
   font-size: 20px;
   line-height: 1.2;
@@ -540,8 +568,8 @@ body {
 
 .check .send-check {
   display: inline-block;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.2;
   letter-spacing: 0.03em;
   color: #212121;
 }
