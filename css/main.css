@@ -729,6 +729,28 @@ body.modal-open {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+  .features-link li {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
 .features-link .features-gray {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -789,6 +811,12 @@ body.modal-open {
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .ourteam h2 {
+    margin-bottom: 30px;
+  }
+}
+
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -828,17 +856,19 @@ body.modal-open {
   fill: #ffffff;
 }
 
-.command-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+@media screen and (min-width: 768px) {
+  .command-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+  .command-link li {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
 }
 
 .command-link img {
@@ -860,7 +890,12 @@ body.modal-open {
   border-radius: 0px 0px 4px 4px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  margin-top: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .command-link > li {
+    margin-top: 30px;
+  }
 }
 
 .command-link p {
@@ -893,6 +928,13 @@ body.modal-open {
       flex-wrap: wrap;
 }
 
+@media screen and (min-width: 767px) {
+  .client {
+    padding-top: 30px;
+    margin: -15px;
+  }
+}
+
 .client-item {
   margin-top: 30px;
   display: -webkit-box;
@@ -910,6 +952,13 @@ body.modal-open {
   fill: #AFB1B8;
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .client-item {
+    width: calc((100% - 3 * 30px) / 3);
+    margin: 15px;
+  }
 }
 
 .client-item:hover, .client-item:focus {
@@ -1164,7 +1213,28 @@ address p {
   margin-bottom: 9px;
 }
 
+@media screen and (min-width: 768px) {
+  .footer-tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-self: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .footer-two {
+    margin-top: 0;
+  }
+}
+
 /*форма в футере*/
+.subscription {
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+}
+
 .subscription input {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -1220,7 +1290,6 @@ address p {
 
 .footerForm {
   text-align: center;
-  margin-top: 60px;
 }
 
 .footerForm input:hover {

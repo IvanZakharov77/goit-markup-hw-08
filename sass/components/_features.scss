@@ -1,18 +1,29 @@
 
 /*features*/
 .features {
-  // @media screen and (min-width:768px) {
-  //   padding-top: 94px;
-  //   padding-bottom: 94px
-  // }
+
   @media screen and (max-width:767px) {
     padding-top: 60px;
     padding-bottom:30px
   }
+@media screen and( min-width:768px){
+  padding-top: 60px;
+  padding-bottom:60px
+}
 }
 
 .features-link {
 
+@media screen and(min-width:768px) {
+
+display: flex;
+flex-wrap: wrap;
+margin: -15px;
+& li{
+  width: calc((100% - 2 * 30px) / 2);
+  margin: 15px;
+ }
+}
 
   .features-gray{
       display: flex;
@@ -24,14 +35,6 @@
       border-radius: 4px;
       margin-bottom: 30px;
 
-  //   @media screen and (min-width){
-  //   align-items: center;
-  //   background: #F5F4FA;
-  //   width: 270px;
-  //   height: 120px;
-  //   border-radius: 4px;
-  //   margin-bottom: 30px;
-  // }
 }
 
 h3{
@@ -53,12 +56,6 @@ p{
   letter-spacing: 0.03em;
   color: $second-text-color
 }
-// li{
-//   width: 270px;
-// }
-// li:not(:last-child) {
-//   margin-right: 30px;
-// }
 }
 
 .vektor {

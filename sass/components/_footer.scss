@@ -97,4 +97,13 @@ margin-top: 20px;
   margin-bottom: 9px;
 }
 }
-
+@media screen and (min-width:768px){
+  .footer-tab{
+    display: flex;
+    justify-self: flex-start;
+    justify-content: space-around;
+  }
+  .footer-two{
+    margin-top: 0;
+  }
+}
