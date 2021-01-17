@@ -1,6 +1,7 @@
 
 .logo {
- 
+  font-size: 24px;
+  line-height: 1.4;
   font-family: 'Raleway', sans-serif;
   // font-size: 26px;
   // line-height: 1.2;
@@ -17,10 +18,9 @@
   .color-logo-second{
     color: $first-color;
   }
-@media screen and (max-width: 767px) {
-  font-size: 24px;
-  line-height: 1.4;
-
+@media screen and (min-width:768px) {
+padding-top: 26px;
+padding-bottom: 26px;
 }
 }
 

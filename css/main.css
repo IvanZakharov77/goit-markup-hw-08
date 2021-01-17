@@ -98,13 +98,27 @@ body.modal-open {
   padding-right: 15px;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 480px) {
   .container {
-    width: 1200px;
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .container {
+    width: 1140px;
   }
 }
 
 .logo {
+  font-size: 24px;
+  line-height: 1.4;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   color: #000000;
@@ -119,10 +133,10 @@ body.modal-open {
   color: #ffffff;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .logo {
-    font-size: 24px;
-    line-height: 1.4;
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
 }
 
@@ -130,6 +144,13 @@ body.modal-open {
 .header {
   position: relative;
   border-bottom: 1px solid #ECECEC;
+  z-index: 2;
+}
+
+.header-fix {
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff;
 }
 
 .header-container .main-nav {
@@ -143,6 +164,15 @@ body.modal-open {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-height: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .header-container .main-nav {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    min-height: 80px;
+  }
 }
 
 .menu-button {
@@ -173,7 +203,12 @@ body.modal-open {
   }
 }
 
+.menu-button:hover, .menu-button:focus {
+  fill: #2196F3;
+}
+
 .menu-container {
+  z-index: 99999;
   background-color: #ffffff;
 }
 
@@ -184,6 +219,8 @@ body.modal-open {
     top: 101%;
     left: 0;
     width: 100%;
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
   }
   .menu-container.is-open {
     display: block;
@@ -195,6 +232,9 @@ body.modal-open {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .menu-container .navigation {
+    padding-top: 32px;
   }
 }
 
@@ -214,14 +254,6 @@ body.modal-open {
   }
   .navigation > .nav-list, .contacts > .nav-contacts {
     text-align: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .nav-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 }
 
@@ -252,6 +284,28 @@ body.modal-open {
   background-color: #188CE8;
 }
 
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav-list .link.current::after {
+    bottom: 0;
+  }
+  .nav-list .link {
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.17;
+  }
+  .nav-list .item:nth-child(-n+2) {
+    margin-right: 50px;
+  }
+  .nav-list .item:last-child {
+    margin-right: 84px;
+  }
+}
+
 .nav-contacts .link {
   color: #757575;
   font-size: 18px;
@@ -266,6 +320,43 @@ body.modal-open {
 
 .nav-contacts svg {
   margin-right: 10px;
+}
+
+.nav-contacts .link-mail {
+  width: 16px;
+  height: 11.2px;
+}
+
+.nav-contacts .link-phone {
+  width: 10px;
+  height: 14.94px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-contacts .first {
+    padding-top: 21px;
+  }
+  .nav-contacts .item:first-child {
+    padding-bottom: 10px;
+  }
+  .nav-contacts .link {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 12px;
+    line-height: 1.17;
+  }
+  .nav-contacts .link-mail {
+    width: 14px;
+    height: 10px;
+  }
+  .nav-contacts .link-phone {
+    width: 10px;
+    height: 14px;
+  }
 }
 
 /*hero*/
@@ -284,8 +375,8 @@ body.modal-open {
 
 @media screen and (min-width: 768px) {
   .hero-discription h1 {
-    font-size: 44px;
-    line-height: 1.4;
+    font-size: 26px;
+    line-height: 1.6;
     font-weight: 900;
     letter-spacing: 0.06em;
     color: #ffffff;
@@ -375,13 +466,21 @@ body.modal-open {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-button:hover {
+.modal-button:hover, .modal-button:focus {
   fill: #2196F3;
 }
 
 .modal-vektor {
   width: 11px;
   height: 11px;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .send {
@@ -825,7 +924,21 @@ body.modal-open {
 
 /*filters*/
 .filters {
-  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .filters {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  .filters li:nth-last-child(-n + 2) {
+    padding-top: 15px;
+  }
 }
 
 .filters .button-link {
@@ -867,8 +980,8 @@ body.modal-open {
 }
 
 .portfolio .projects {
-  margin: -15px;
-  /*ужимаем маржины флексм-элементов*/
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .portfolio .project-item {
@@ -891,17 +1004,23 @@ body.modal-open {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project-link:hover .overlay {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+@media screen and (max-width: 767px) {
+  .project-link:active .overlay,
+  .project-link:focus .overlay {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    pointer-events: initial;
+  }
 }
 
 .project-img {
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .overlay {
+  pointer-events: none;
   display: block;
   position: absolute;
   bottom: 0;
@@ -926,11 +1045,11 @@ body.modal-open {
 }
 
 .flex-element {
-  /*width: calc((100% - 60px) / 3);
-  margin-right:30px;
-  margin-bottom: 30px;*/
-  width: 370px;
-  margin: 15px;
+  width: 100%;
+}
+
+.flex-element:not(:first-child) {
+  padding-top: 30px;
 }
 
 .flex-element a,
@@ -938,14 +1057,6 @@ body.modal-open {
   display: block;
 }
 
-/*
-.flex-element:nth-child(3n) {
-  margin-right: 0px;
-}
-.flex-element:nth-last-child(-n + 3) {
-  margin-bottom: 0px;
-}
-*/
 .project-item h3 {
   font-size: 18px;
   line-height: 2;

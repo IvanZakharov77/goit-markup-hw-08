@@ -4,14 +4,23 @@
     position: relative;
     border-bottom: 1px solid #ECECEC;
 
-
+z-index: 2;
 }
-
+.header-fix{
+    position: fixed;
+    width: 100%;
+    background-color: $first-color;
+}
 .header-container .main-nav{
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 60px;
+@media screen and(min-width:768px) {
+    align-items:baseline;
+min-height: 80px;
+}
 }
 
 .menu-button{
@@ -25,6 +34,7 @@ display: inline-flex;
     }
     &.is-open .icon-cross {
         display: block;
+
     }
     &.is-open .icon-menu {
         display: none;
@@ -33,9 +43,14 @@ display: inline-flex;
         display: none;
     }
 
+    &:hover,
+    &:focus{
+        fill: $accent-color;
+    }
 }
-.menu-container{
 
+.menu-container{
+z-index: 99999;
 background-color: $first-color;
 
 @media screen and (max-width:767px){
@@ -44,17 +59,21 @@ background-color: $first-color;
     top: 101%;
     left: 0;
 width: 100%;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 &.is-open{
     display: block;
     }
 }
-
-
-
 @media screen and (min-width:768px){
     display: flex;
+    .navigation{
+        padding-top: 32px;
+    }
+
 }
 }
+
+
 @media screen and (max-width: 767px){
 
     .navigation{
@@ -76,9 +95,7 @@ width: 100%;
 }
 }
 .nav-list{
-    @media screen and (min-width:768px){
-        display: flex;
-    }
+
     .link{
         color: $primary-text-color;
         font-size: 18px;
@@ -102,6 +119,26 @@ width: 100%;
         border-radius: 2px;
         background-color: #188CE8;
     }
+    @media screen and (min-width:768px){
+
+        display: flex;
+
+        .link.current::after{
+            bottom:0
+        }
+       .link{
+
+           padding-bottom: 32px;
+        font-size: 14px;
+        line-height: 1.17;
+       }
+       .item:nth-child(-n+2){
+           margin-right: 50px;
+       }
+       .item:last-child{
+        margin-right: 84px;
+    }
+    }
 }
 .nav-contacts{
    .link{
@@ -116,6 +153,38 @@ width: 100%;
 }
     & svg{
         margin-right: 10px;
+    }
+
+       .link-mail{
+           width:16px;
+           height: 11.2px;
+       }
+       .link-phone{
+           width: 10px;
+           height: 14.94px;
+       }
+    @media screen and (min-width:768px){
+        .first{
+            padding-top: 21px;
+        }
+.item:first-child{
+    padding-bottom: 10px;
+}
+       .link{
+           display: inline-flex;
+           align-items: center;
+        font-size: 12px;
+        line-height: 1.17;
+       }
+       .link-mail{
+           width: 14px;
+           height: 10px;
+       }
+       .link-phone{
+           width: 10px;
+           height: 14px;
+       }
+
     }
 }
 // .link {
