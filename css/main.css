@@ -442,6 +442,12 @@ body.modal-open {
   pointer-events: none;
 }
 
+@media screen and (min-width: 768px) {
+  .backdrop {
+    padding-top: 208px;
+  }
+}
+
 .modal {
   position: relative;
   width: 100%;
@@ -475,7 +481,7 @@ body.modal-open {
   height: 11px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .modal {
     width: 450px;
     margin-left: auto;
