@@ -1,5 +1,6 @@
 /*hero*/
 .hero {
+
   background-color: #2F303A;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/firstimg.jpg);
   height: 600px;
@@ -11,8 +12,9 @@
   padding-bottom: 200px;
 
   &-discription h1 {
-    @media screen and (min-width:768px) {
-      font-size:26px;
+
+    @media screen and (max-width:767px) {
+      font-size: 26px;
       line-height: 1.6;
       font-weight: 900;
       letter-spacing: 0.06em;
@@ -20,8 +22,8 @@
       text-transform: uppercase;
       margin-bottom: 30px;
     }
-    @media screen and (max-width:767px) {
-      font-size: 26px;
+    @media screen and (min-width:768px) {
+      font-size:26px;
       line-height: 1.6;
       font-weight: 900;
       letter-spacing: 0.06em;

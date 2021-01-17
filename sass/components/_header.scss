@@ -1,16 +1,14 @@
 
 /*header*/
 .header {
-    position: relative;
-    border-bottom: 1px solid #ECECEC;
 
-z-index: 2;
-}
-.header-fix{
+    border-bottom: 1px solid #ECECEC;
     position: fixed;
     width: 100%;
     background-color: $first-color;
+z-index: 2;
 }
+
 .header-container .main-nav{
 
     display: flex;
@@ -171,7 +169,7 @@ box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0p
     padding-bottom: 10px;
 }
        .link{
-           display: inline-flex;
+           display:flex;
            align-items: center;
         font-size: 12px;
         line-height: 1.17;
