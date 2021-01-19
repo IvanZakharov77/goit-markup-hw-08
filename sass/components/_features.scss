@@ -50,9 +50,13 @@ margin: -15px;
       margin-bottom: 30px;
 
 }
+.features-item{
+  @media screen and( max-width:768px){
+    text-align:center;
+  }
+}
+.features-item{
 
-h3{
-  text-align:center;
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.03em;
@@ -60,7 +64,10 @@ h3{
   color: $primary-text-color;
   text-transform: uppercase;
   padding-bottom: 10px
+
 }
+
+
 p{
 
   font-weight: 400;

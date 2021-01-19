@@ -858,8 +858,13 @@ body.modal-open {
   margin-bottom: 30px;
 }
 
-.features-link h3 {
-  text-align: center;
+@media screen and (max-width: 768px) {
+  .features-link .features-item {
+    text-align: center;
+  }
+}
+
+.features-link .features-item {
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.03em;
