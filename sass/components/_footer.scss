@@ -5,12 +5,17 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+@media screen and (min-width:1200px){
+  &-container{
+  justify-content:space-between ;
+  }
 
+}
 
 }
 .footer-title {
 
-  text-align: center;
+
    color:$first-color;
    font-weight: 700;
    font-size: 14px;
@@ -18,7 +23,9 @@
    margin-bottom: 20px;
    letter-spacing: 0.03em;
    text-transform: uppercase;
-
+   @media screen and (max-width:1199px) {
+    text-align: center;
+  }
  }
 .footer-two {
   margin-top: 60px;
@@ -68,6 +75,9 @@
     line-height: 1.7;
     font-style: normal;
     color: $first-color;
+    @media screen and (min-width:1200px) {
+      margin-right: 70px;
+      }
   }
   &-link a {
     font-size: 14px;
@@ -91,7 +101,10 @@
 }
 
 address{
-  text-align: center;
+  @media screen and (max-width:1199px) {
+    text-align: center;
+  }
+
   p {
 margin-top: 20px;
   margin-bottom: 9px;

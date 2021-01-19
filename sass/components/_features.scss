@@ -10,6 +10,10 @@
   padding-top: 60px;
   padding-bottom:60px
 }
+@media screen and( min-width:768px){
+  padding-top: 94px;
+  padding-bottom:94px
+}
 }
 
 .features-link {
@@ -24,6 +28,16 @@ margin: -15px;
   margin: 15px;
  }
 }
+@media screen and(min-width:1200px) {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+  & li{
+    width: calc((100% - 4 * 30px) / 4);
+    margin: 15px;
+   }
+  }
 
   .features-gray{
       display: flex;
