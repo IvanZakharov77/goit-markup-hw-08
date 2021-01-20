@@ -129,6 +129,11 @@ margin: -15px;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .overlay {

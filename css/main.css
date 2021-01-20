@@ -1304,6 +1304,12 @@ body.modal-open {
   z-index: 1;
 }
 
+.project-img img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .overlay {
   pointer-events: none;
   display: block;
