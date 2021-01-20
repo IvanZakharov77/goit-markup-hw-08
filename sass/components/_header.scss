@@ -15,9 +15,10 @@ z-index: 2;
     align-items: center;
     justify-content: space-between;
     min-height: 60px;
+
 @media screen and(min-width:768px) {
     align-items:baseline;
-min-height: 80px;
+    min-height: 80px;
 }
 }
 
@@ -52,27 +53,15 @@ z-index: 99999;
 background-color: $first-color;
 
 @media screen and (max-width:767px){
-    position: absolute;
-    display: none;
-    top: 101%;
-    left: 0;
-width: 100%;
-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-&.is-open{
-    display: block;
+        position: absolute;
+        display: none;
+        top: 101%;
+        left: 0;
+        width: 100%;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+    &.is-open{
+        display: block;
     }
-}
-@media screen and (min-width:768px){
-    display: flex;
-    .navigation{
-        padding-top: 32px;
-    }
-
-}
-}
-
-
-@media screen and (max-width: 767px){
 
     .navigation{
         padding-top: 60px;
@@ -81,17 +70,31 @@ box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0p
     .contacts{
         padding-bottom: 60px;
     }
-.nav-list li:not(:first-child){
-    margin-top: 40px;
+    .nav-list li:not(:first-child){
+        margin-top: 40px;
 }
-.nav-contacts li:not(:first-child){
-    margin-top: 16px;
+    .nav-contacts li:not(:first-child){
+        margin-top: 16px;
 }
-.navigation>.nav-list, .contacts>.nav-contacts {
-    text-align: center;
+    .navigation>.nav-list, .contacts>.nav-contacts {
+        text-align: center;
 
 }
 }
+
+
+
+
+
+@media screen and (min-width:768px){
+    display: flex;
+    .navigation{
+        padding-top: 32px;
+    }
+  }
+}
+
+
 .nav-list{
 
     .link{
@@ -143,11 +146,14 @@ margin-right: 305px;
         }
     }
 }
+
 @media screen and (min-width:1200px){
     .contacts{
         padding-top: 32px;
     }
 }
+
+
 .nav-contacts{
 
         .link:focus,  .link:hover {
@@ -157,60 +163,73 @@ margin-right: 305px;
         margin-right: 10px;
     }
 
+
+
+       .link{
+
+        font-size: 18px;
+        line-height: 1.17px;
+        color:$second-text-color;
+        font-weight: 500;
+        fill: currentColor;
+
+
+       }
        .link-mail{
-           width:16px;
-           height: 11.2px;
-       }
-       .link-phone{
-           width: 10px;
-           height: 14.94px;
-       }
-    @media screen and (min-width:768px) and (max-width:1199px){
+        width: 16px;
+        height: 11.2px;
+    }
+    .link-phone{
+        width: 10px;
+        height: 14.94px;
+    }
+       @media screen and (min-width:768px) and (max-width:1199px){
         .first{
             padding-top: 21px;
         }
 
-
+.link{
+    font-size: 12px;
+    line-height: 1.17px;
+    display:flex;
+    align-items: center;
+}
+.link-mail{
+    width: 14px;
+    height: 10px;
+}
+.link-phone{
+    width: 10px;
+    height: 14px;
+}
         .item:first-child{
           padding-bottom: 10px;
     }
 }
-       .link{
-        color:$second-text-color;
-        font-weight: 500;
-        fill: currentColor;
-           display:flex;
-           align-items: center;
-        font-size: 12px;
-        line-height: 1.17;
-       }
 
-       .link-mail{
-           width: 14px;
-           height: 10px;
-       }
-       .link-phone{
-           width: 10px;
-           height: 14px;
-       }
        @media screen and (min-width:1200px){
-        display: flex;
-        align-items: center;
+            display: flex;
+            align-items: center;
+
+            .link{
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                line-height: 1.17px;
+
+            }
         .item:first-child{
             margin-right: 30px;
       }
-.link{
-    font-size: 14px;
-    line-height: 1.15px;
-}
-.link-mail{
-    width: 16px;
-    height: 12px;
-}
-.link-phone{
-    width: 10px;
-    height: 16px;
-}
+
+        .link-mail{
+            width: 16px;
+            height: 12px;
+    }
+        .link-phone{
+            width: 10px;
+            height: 16px;
+    }
        }
 
 }

@@ -112,7 +112,7 @@ margin: -15px;
      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 
-
+  &:hover .overlay,
     &:active .overlay,
     &:focus .overlay {
       transform: translateY(0);
@@ -174,7 +174,7 @@ margin: -15px;
   & h3 {
     font-size: 18px;
     line-height: 2;
-    font-weight: 700px;
+    font-weight: 700;
     color:$primary-text-color;
   }
 

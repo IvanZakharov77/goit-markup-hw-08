@@ -227,6 +227,22 @@ body.modal-open {
   .menu-container.is-open {
     display: block;
   }
+  .menu-container .navigation {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .menu-container .contacts {
+    padding-bottom: 60px;
+  }
+  .menu-container .nav-list li:not(:first-child) {
+    margin-top: 40px;
+  }
+  .menu-container .nav-contacts li:not(:first-child) {
+    margin-top: 16px;
+  }
+  .menu-container .navigation > .nav-list, .menu-container .contacts > .nav-contacts {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -237,25 +253,6 @@ body.modal-open {
   }
   .menu-container .navigation {
     padding-top: 32px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .navigation {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  .contacts {
-    padding-bottom: 60px;
-  }
-  .nav-list li:not(:first-child) {
-    margin-top: 40px;
-  }
-  .nav-contacts li:not(:first-child) {
-    margin-top: 16px;
-  }
-  .navigation > .nav-list, .contacts > .nav-contacts {
-    text-align: center;
   }
 }
 
@@ -328,6 +325,14 @@ body.modal-open {
   margin-right: 10px;
 }
 
+.nav-contacts .link {
+  font-size: 18px;
+  line-height: 1.17px;
+  color: #757575;
+  font-weight: 500;
+  fill: currentColor;
+}
+
 .nav-contacts .link-mail {
   width: 16px;
   height: 11.2px;
@@ -342,33 +347,27 @@ body.modal-open {
   .nav-contacts .first {
     padding-top: 21px;
   }
+  .nav-contacts .link {
+    font-size: 12px;
+    line-height: 1.17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-contacts .link-mail {
+    width: 14px;
+    height: 10px;
+  }
+  .nav-contacts .link-phone {
+    width: 10px;
+    height: 14px;
+  }
   .nav-contacts .item:first-child {
     padding-bottom: 10px;
   }
-}
-
-.nav-contacts .link {
-  color: #757575;
-  font-weight: 500;
-  fill: currentColor;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 12px;
-  line-height: 1.17;
-}
-
-.nav-contacts .link-mail {
-  width: 14px;
-  height: 10px;
-}
-
-.nav-contacts .link-phone {
-  width: 10px;
-  height: 14px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -380,12 +379,18 @@ body.modal-open {
         -ms-flex-align: center;
             align-items: center;
   }
+  .nav-contacts .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 14px;
+    line-height: 1.17px;
+  }
   .nav-contacts .item:first-child {
     margin-right: 30px;
-  }
-  .nav-contacts .link {
-    font-size: 14px;
-    line-height: 1.15px;
   }
   .nav-contacts .link-mail {
     width: 16px;
@@ -496,6 +501,8 @@ body.modal-open {
   background: rgba(0, 0, 0, 0.2);
   -webkit-transform: scale(1);
           transform: scale(1);
+  -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
 }
 
@@ -1260,6 +1267,7 @@ body.modal-open {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.project-link:hover .overlay,
 .project-link:active .overlay,
 .project-link:focus .overlay {
   -webkit-transform: translateY(0);
@@ -1315,7 +1323,7 @@ body.modal-open {
 .project-item h3 {
   font-size: 18px;
   line-height: 2;
-  font-weight: 700px;
+  font-weight: 700;
   color: #212121;
 }
 
