@@ -411,9 +411,6 @@ body.modal-open {
 /*hero*/
 .hero {
   background-color: #2F303A;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/firstimg.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/firstimg.jpg);
-  height: 600px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -424,7 +421,6 @@ body.modal-open {
 
 @media screen and (max-width: 767px) {
   .hero {
-    max-width: 480px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -432,7 +428,6 @@ body.modal-open {
 
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -440,7 +435,6 @@ body.modal-open {
 
 @media screen and (min-width: 1200px) {
   .hero {
-    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -467,6 +461,21 @@ body.modal-open {
     color: #ffffff;
     text-transform: uppercase;
     margin-bottom: 30px;
+  }
+}
+
+.hero {
+  width: 480px;
+  height: 400px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../image/mobile/hero/Headerimg.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../image/mobile/hero/Headerimg.jpg);
+  background-size: 480px 400px;
+}
+
+@media screen and (min-device-pixel-ratio), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../image/mobile/hero/Headerimg@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../image/mobile/hero/Headerimg@2x.jpg);
   }
 }
 
