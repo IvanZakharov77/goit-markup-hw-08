@@ -92,6 +92,31 @@ img {
   height: auto;
 }
 
+.section-title {
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .section-title {
+    font-size: 28px;
+    line-height: 1.18;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+    line-height: 1.17;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
 /*class container*/
 body.modal-open {
   overflow: hidden;
@@ -456,6 +481,18 @@ body.modal-open {
   .hero-discription h1 {
     font-size: 26px;
     line-height: 1.6;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-discription h1 {
+    font-size: 44px;
+    line-height: 1.36;
     font-weight: 900;
     letter-spacing: 0.06em;
     color: #ffffff;
@@ -1029,12 +1066,6 @@ body.modal-open {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-  .ourteam h2 {
-    margin-bottom: 30px;
-  }
-}
-
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1159,9 +1190,8 @@ body.modal-open {
       flex-wrap: wrap;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .client {
-    padding-top: 30px;
     margin: -15px;
   }
 }
